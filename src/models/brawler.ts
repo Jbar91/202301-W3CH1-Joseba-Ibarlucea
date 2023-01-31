@@ -3,6 +3,7 @@ import { Character, DtoCharacter } from './character.js';
 export class Brawler extends Character {
   public weapon: string;
   public dexterity: number;
+  readonly message: string;
 
   constructor(dtoB: DtoCharacter, weapon: string) {
     const dtoBrawler: DtoCharacter = {
@@ -11,10 +12,10 @@ export class Brawler extends Character {
       family: dtoB.family,
       age: dtoB.age,
       isAlive: dtoB.isAlive,
-      message: 'Primero pego y luego pregunto',
     };
     const dex = Math.round(Math.random() * (10 - 0));
     super(dtoBrawler);
+    this.message = 'Primero pego y luego pregunto';
     this.weapon = weapon;
     this.dexterity = dex;
   }
