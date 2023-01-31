@@ -12,13 +12,14 @@ export class Character {
   public family: string;
   public age: number;
   public isAlive: boolean;
-  public message!: string;
-  constructor(dto: DtoCharacter) {
+  readonly message: string;
+  constructor(dto: DtoCharacter, message: string) {
     this.series = dto.series;
     this.name = dto.name;
     this.family = dto.family;
     this.age = dto.age;
     this.isAlive = true;
+    this.message = message;
   }
 
   communicate() {

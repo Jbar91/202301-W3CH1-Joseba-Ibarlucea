@@ -2,7 +2,6 @@ import { Character, DtoCharacter } from '../models/character.js';
 
 export class RightHand extends Character {
   public assess: string;
-  public message: string;
   constructor(dtoRH: DtoCharacter, assess: string) {
     const dtoRHand: DtoCharacter = {
       series: dtoRH.series,
@@ -11,9 +10,8 @@ export class RightHand extends Character {
       age: dtoRH.age,
       isAlive: dtoRH.isAlive,
     };
-    super(dtoRHand);
+    super(dtoRHand, 'No se por que, pero creo que voy a morir pronto');
     this.assess = assess;
-    this.message = 'No se por que, pero creo que voy a morir pronto';
   }
 
   hand() {

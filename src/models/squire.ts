@@ -14,10 +14,9 @@ export class Squire extends Character {
     };
 
     const loy = Math.round(Math.random() * (10 - 0));
-    super(dtoSquire);
+    super(dtoSquire, 'Soy un looser');
     this.knight = 'Jamie Lannister';
     this.loyalty = loy;
-    this.message = 'Soy un looser';
   }
 
   assKissing() {

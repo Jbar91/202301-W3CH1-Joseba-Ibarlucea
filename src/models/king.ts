@@ -2,7 +2,6 @@ import { Character, DtoCharacter } from '../models/character.js';
 
 export class King extends Character {
   public reign: number;
-  public message: string;
 
   constructor(dtoK: DtoCharacter, reign: number) {
     const dtoCharacter: DtoCharacter = {
@@ -12,8 +11,7 @@ export class King extends Character {
       age: dtoK.age,
       isAlive: dtoK.isAlive,
     };
-    super(dtoCharacter);
+    super(dtoCharacter, 'Vais a morir todos');
     this.reign = reign;
-    this.message = 'Vais a morir todos';
   }
 }

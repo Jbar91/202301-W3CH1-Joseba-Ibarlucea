@@ -6,9 +6,8 @@ const dto: DtoCharacter = {
   family: 'Ernesto',
   age: 23,
   isAlive: true,
-  message: 'foo, bar',
 };
-const char = new Character(dto);
+const char = new Character(dto, 'foo, bar');
 
 describe('Given the Character class', () => {
   describe('When the class instantiates', () => {
