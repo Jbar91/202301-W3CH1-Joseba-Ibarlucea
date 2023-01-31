@@ -49,12 +49,3 @@ const bronn = new Squire({
 });
 
 export const charactersArr = [joffrey, jaime, daenerys, tyrion, bronn];
-
-console.log(
-  charactersArr,
-  joffrey.communicate(),
-  joffrey.state(),
-  joffrey.perish(),
-  joffrey.state(),
-  jaime.skill()
-);
