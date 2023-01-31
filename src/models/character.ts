@@ -4,7 +4,6 @@ export type DtoCharacter = {
   family: string;
   age: number;
   isAlive: boolean;
-  message: string;
 };
 
 export class Character {
@@ -13,14 +12,13 @@ export class Character {
   public family: string;
   public age: number;
   public isAlive: boolean;
-  public message: string;
+  public message!: string;
   constructor(dto: DtoCharacter) {
     this.series = dto.series;
     this.name = dto.name;
     this.family = dto.family;
     this.age = dto.age;
     this.isAlive = true;
-    this.message = dto.message;
   }
 
   communicate() {
