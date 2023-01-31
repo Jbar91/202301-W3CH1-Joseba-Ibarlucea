@@ -1,19 +1,10 @@
 import { Character, DtoCharacter } from './character.js';
 
-type DtoBrawler = {
-  series: string;
-  name: string;
-  family: string;
-  age: number;
-  isAlive: boolean;
-  weapon: string;
-};
-
 export class Brawler extends Character {
   public weapon: string;
   public dexterity: number;
 
-  constructor(dtoB: DtoBrawler) {
+  constructor(dtoB: DtoCharacter, weapon: string) {
     const dtoBrawler: DtoCharacter = {
       series: dtoB.series,
       name: dtoB.name,
@@ -24,7 +15,7 @@ export class Brawler extends Character {
     };
     const dex = Math.round(Math.random() * (10 - 0));
     super(dtoBrawler);
-    this.weapon = dtoB.weapon;
+    this.weapon = weapon;
     this.dexterity = dex;
   }
 
